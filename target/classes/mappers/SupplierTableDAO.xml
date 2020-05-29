@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.six.mapper.SupplierTableDAO">
+  <resultMap id="BaseResultMap" type="com.six.bean.SupplierTable">
+    <id column="Supplier_id" jdbcType="INTEGER" property="supplierId" />
+    <result column="Supplier_name" jdbcType="VARCHAR" property="supplierName" />
+    <result column="Supplier_people" jdbcType="VARCHAR" property="supplierPeople" />
+    <result column="Supplier_phone" jdbcType="VARCHAR" property="supplierPhone" />
+    <result column="Supplier_address" jdbcType="VARCHAR" property="supplierAddress" />
+    <result column="Supplier_fax" jdbcType="VARCHAR" property="supplierFax" />
+    <result column="Supplier_describe" jdbcType="VARCHAR" property="supplierDescribe" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    Supplier_id, Supplier_name, Supplier_people, Supplier_phone, Supplier_address, Supplier_fax, 
+    Supplier_describe
+  </sql>
+  <select id="selectByExample" parameterType="com.six.bean.SupplierTableExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from supplier_table
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from supplier_table
+    where Supplier_id = #{supplierId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from supplier_table
+    where Supplier_id = #{supplierId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.six.bean.SupplierTableExample">
+    delete from supplier_table
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.six.bean.SupplierTable">
+    insert into supplier_table (Supplier_id, Supplier_name, Supplier_people, 
+      Supplier_phone, Supplier_address, Supplier_fax, 
+      Supplier_describe)
+    values (#{supplierId,jdbcType=INTEGER}, #{supplierName,jdbcType=VARCHAR}, #{supplierPeople,jdbcType=VARCHAR}, 
+      #{supplierPhone,jdbcType=VARCHAR}, #{supplierAddress,jdbcType=VARCHAR}, #{supplierFax,jdbcType=VARCHAR}, 
+      #{supplierDescribe,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.six.bean.SupplierTable">
+    insert into supplier_table
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="supplierId != null">
+        Supplier_id,
+      </if>
+      <if test="supplierName != null">
+        Supplier_name,
+      </if>
+      <if test="supplierPeople != null">
+        Supplier_people,
+      </if>
+      <if test="supplierPhone != null">
+        Supplier_phone,
+      </if>
+      <if test="supplierAddress != null">
+        Supplier_address,
+      </if>
+      <if test="supplierFax != null">
+        Supplier_fax,
+      </if>
+      <if test="supplierDescribe != null">
+        Supplier_describe,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="supplierId != null">
+        #{supplierId,jdbcType=INTEGER},
+      </if>
+      <if test="supplierName != null">
+        #{supplierName,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierPeople != null">
+        #{supplierPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierPhone != null">
+        #{supplierPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierAddress != null">
+        #{supplierAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierFax != null">
+        #{supplierFax,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierDescribe != null">
+        #{supplierDescribe,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.six.bean.SupplierTableExample" resultType="java.lang.Long">
+    select count(*) from supplier_table
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update supplier_table
+    <set>
+      <if test="record.supplierId != null">
+        Supplier_id = #{record.supplierId,jdbcType=INTEGER},
+      </if>
+      <if test="record.supplierName != null">
+        Supplier_name = #{record.supplierName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.supplierPeople != null">
+        Supplier_people = #{record.supplierPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="record.supplierPhone != null">
+        Supplier_phone = #{record.supplierPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="record.supplierAddress != null">
+        Supplier_address = #{record.supplierAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.supplierFax != null">
+        Supplier_fax = #{record.supplierFax,jdbcType=VARCHAR},
+      </if>
+      <if test="record.supplierDescribe != null">
+        Supplier_describe = #{record.supplierDescribe,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update supplier_table
+    set Supplier_id = #{record.supplierId,jdbcType=INTEGER},
+      Supplier_name = #{record.supplierName,jdbcType=VARCHAR},
+      Supplier_people = #{record.supplierPeople,jdbcType=VARCHAR},
+      Supplier_phone = #{record.supplierPhone,jdbcType=VARCHAR},
+      Supplier_address = #{record.supplierAddress,jdbcType=VARCHAR},
+      Supplier_fax = #{record.supplierFax,jdbcType=VARCHAR},
+      Supplier_describe = #{record.supplierDescribe,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.six.bean.SupplierTable">
+    update supplier_table
+    <set>
+      <if test="supplierName != null">
+        Supplier_name = #{supplierName,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierPeople != null">
+        Supplier_people = #{supplierPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierPhone != null">
+        Supplier_phone = #{supplierPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierAddress != null">
+        Supplier_address = #{supplierAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierFax != null">
+        Supplier_fax = #{supplierFax,jdbcType=VARCHAR},
+      </if>
+      <if test="supplierDescribe != null">
+        Supplier_describe = #{supplierDescribe,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where Supplier_id = #{supplierId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.six.bean.SupplierTable">
+    update supplier_table
+    set Supplier_name = #{supplierName,jdbcType=VARCHAR},
+      Supplier_people = #{supplierPeople,jdbcType=VARCHAR},
+      Supplier_phone = #{supplierPhone,jdbcType=VARCHAR},
+      Supplier_address = #{supplierAddress,jdbcType=VARCHAR},
+      Supplier_fax = #{supplierFax,jdbcType=VARCHAR},
+      Supplier_describe = #{supplierDescribe,jdbcType=VARCHAR}
+    where Supplier_id = #{supplierId,jdbcType=INTEGER}
+  </update>
+</mapper>

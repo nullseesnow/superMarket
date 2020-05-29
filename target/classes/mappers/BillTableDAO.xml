@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.six.mapper.BillTableDAO">
+  <resultMap id="BaseResultMap" type="com.six.bean.BillTable">
+    <id column="Bill_id" jdbcType="INTEGER" property="billId" />
+    <result column="Supplier_id" jdbcType="INTEGER" property="supplierId" />
+    <result column="Shop_id" jdbcType="INTEGER" property="shopId" />
+    <result column="Shop_price" jdbcType="DOUBLE" property="shopPrice" />
+    <result column="Bill_money" jdbcType="INTEGER" property="billMoney" />
+    <result column="Bill_date" jdbcType="DATE" property="billDate" />
+    <result column="Bill_payment" jdbcType="VARCHAR" property="billPayment" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    Bill_id, Supplier_id, Shop_id, Shop_price, Bill_money, Bill_date, Bill_payment
+  </sql>
+  <select id="selectByExample" parameterType="com.six.bean.BillTableExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from bill_table
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from bill_table
+    where Bill_id = #{billId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from bill_table
+    where Bill_id = #{billId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.six.bean.BillTableExample">
+    delete from bill_table
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.six.bean.BillTable">
+    insert into bill_table (Bill_id, Supplier_id, Shop_id, 
+      Shop_price, Bill_money, Bill_date, 
+      Bill_payment)
+    values (#{billId,jdbcType=INTEGER}, #{supplierId,jdbcType=INTEGER}, #{shopId,jdbcType=INTEGER}, 
+      #{shopPrice,jdbcType=DOUBLE}, #{billMoney,jdbcType=INTEGER}, #{billDate,jdbcType=DATE}, 
+      #{billPayment,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.six.bean.BillTable">
+    insert into bill_table
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="billId != null">
+        Bill_id,
+      </if>
+      <if test="supplierId != null">
+        Supplier_id,
+      </if>
+      <if test="shopId != null">
+        Shop_id,
+      </if>
+      <if test="shopPrice != null">
+        Shop_price,
+      </if>
+      <if test="billMoney != null">
+        Bill_money,
+      </if>
+      <if test="billDate != null">
+        Bill_date,
+      </if>
+      <if test="billPayment != null">
+        Bill_payment,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="billId != null">
+        #{billId,jdbcType=INTEGER},
+      </if>
+      <if test="supplierId != null">
+        #{supplierId,jdbcType=INTEGER},
+      </if>
+      <if test="shopId != null">
+        #{shopId,jdbcType=INTEGER},
+      </if>
+      <if test="shopPrice != null">
+        #{shopPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="billMoney != null">
+        #{billMoney,jdbcType=INTEGER},
+      </if>
+      <if test="billDate != null">
+        #{billDate,jdbcType=DATE},
+      </if>
+      <if test="billPayment != null">
+        #{billPayment,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.six.bean.BillTableExample" resultType="java.lang.Long">
+    select count(*) from bill_table
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update bill_table
+    <set>
+      <if test="record.billId != null">
+        Bill_id = #{record.billId,jdbcType=INTEGER},
+      </if>
+      <if test="record.supplierId != null">
+        Supplier_id = #{record.supplierId,jdbcType=INTEGER},
+      </if>
+      <if test="record.shopId != null">
+        Shop_id = #{record.shopId,jdbcType=INTEGER},
+      </if>
+      <if test="record.shopPrice != null">
+        Shop_price = #{record.shopPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="record.billMoney != null">
+        Bill_money = #{record.billMoney,jdbcType=INTEGER},
+      </if>
+      <if test="record.billDate != null">
+        Bill_date = #{record.billDate,jdbcType=DATE},
+      </if>
+      <if test="record.billPayment != null">
+        Bill_payment = #{record.billPayment,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update bill_table
+    set Bill_id = #{record.billId,jdbcType=INTEGER},
+      Supplier_id = #{record.supplierId,jdbcType=INTEGER},
+      Shop_id = #{record.shopId,jdbcType=INTEGER},
+      Shop_price = #{record.shopPrice,jdbcType=DOUBLE},
+      Bill_money = #{record.billMoney,jdbcType=INTEGER},
+      Bill_date = #{record.billDate,jdbcType=DATE},
+      Bill_payment = #{record.billPayment,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.six.bean.BillTable">
+    update bill_table
+    <set>
+      <if test="supplierId != null">
+        Supplier_id = #{supplierId,jdbcType=INTEGER},
+      </if>
+      <if test="shopId != null">
+        Shop_id = #{shopId,jdbcType=INTEGER},
+      </if>
+      <if test="shopPrice != null">
+        Shop_price = #{shopPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="billMoney != null">
+        Bill_money = #{billMoney,jdbcType=INTEGER},
+      </if>
+      <if test="billDate != null">
+        Bill_date = #{billDate,jdbcType=DATE},
+      </if>
+      <if test="billPayment != null">
+        Bill_payment = #{billPayment,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where Bill_id = #{billId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.six.bean.BillTable">
+    update bill_table
+    set Supplier_id = #{supplierId,jdbcType=INTEGER},
+      Shop_id = #{shopId,jdbcType=INTEGER},
+      Shop_price = #{shopPrice,jdbcType=DOUBLE},
+      Bill_money = #{billMoney,jdbcType=INTEGER},
+      Bill_date = #{billDate,jdbcType=DATE},
+      Bill_payment = #{billPayment,jdbcType=VARCHAR}
+    where Bill_id = #{billId,jdbcType=INTEGER}
+  </update>
+</mapper>

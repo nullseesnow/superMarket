@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.six.mapper.ShopTableDAO">
+  <resultMap id="BaseResultMap" type="com.six.bean.ShopTable">
+    <id column="Shop_id" jdbcType="INTEGER" property="shopId" />
+    <result column="Shop_name" jdbcType="VARCHAR" property="shopName" />
+    <result column="Shop_price" jdbcType="DOUBLE" property="shopPrice" />
+    <result column="Shop_img" jdbcType="VARCHAR" property="shopImg" />
+    <result column="Shop_describe" jdbcType="VARCHAR" property="shopDescribe" />
+    <result column="Shop_num" jdbcType="INTEGER" property="shopNum" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    Shop_id, Shop_name, Shop_price, Shop_img, Shop_describe, Shop_num
+  </sql>
+  <select id="selectByExample" parameterType="com.six.bean.ShopTableExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from shop_table
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
+  </select>
+
+<!--分页-->
+    <select id="selectByPage" parameterType="com.six.bean.ShopTable" resultMap="BaseResultMap">
+        select * from shop_table
+        <if test="limit != null">
+            <if test="offset != null">
+                limit ${offset}, ${limit}
+            </if>
+            <if test="offset == null">
+                limit ${limit}
+            </if>
+        </if>
+
+    </select>
+
+  <select id="selectByPage2" parameterType="com.six.bean.ShopTable" resultMap="BaseResultMap">
+    select * from shop_table
+      where shop_name like #{shopName}
+    <if test="limit != null">
+      <if test="offset != null">
+        limit ${offset}, ${limit}
+      </if>
+      <if test="offset == null">
+        limit ${limit}
+      </if>
+    </if>
+
+  </select>
+
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from shop_table
+    where Shop_id = #{shopId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from shop_table
+    where Shop_id = #{shopId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.six.bean.ShopTableExample">
+    delete from shop_table
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.six.bean.ShopTable">
+    insert into shop_table (Shop_id, Shop_name, Shop_price, 
+      Shop_img, Shop_describe, Shop_num
+      )
+    values (#{shopId,jdbcType=INTEGER}, #{shopName,jdbcType=VARCHAR}, #{shopPrice,jdbcType=DOUBLE}, 
+      #{shopImg,jdbcType=VARCHAR}, #{shopDescribe,jdbcType=VARCHAR}, #{shopNum,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.six.bean.ShopTable">
+    insert into shop_table
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="shopId != null">
+        Shop_id,
+      </if>
+      <if test="shopName != null">
+        Shop_name,
+      </if>
+      <if test="shopPrice != null">
+        Shop_price,
+      </if>
+      <if test="shopImg != null">
+        Shop_img,
+      </if>
+      <if test="shopDescribe != null">
+        Shop_describe,
+      </if>
+      <if test="shopNum != null">
+        Shop_num,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="shopId != null">
+        #{shopId,jdbcType=INTEGER},
+      </if>
+      <if test="shopName != null">
+        #{shopName,jdbcType=VARCHAR},
+      </if>
+      <if test="shopPrice != null">
+        #{shopPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="shopImg != null">
+        #{shopImg,jdbcType=VARCHAR},
+      </if>
+      <if test="shopDescribe != null">
+        #{shopDescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="shopNum != null">
+        #{shopNum,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.six.bean.ShopTableExample" resultType="java.lang.Long">
+    select count(*) from shop_table
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update shop_table
+    <set>
+      <if test="record.shopId != null">
+        Shop_id = #{record.shopId,jdbcType=INTEGER},
+      </if>
+      <if test="record.shopName != null">
+        Shop_name = #{record.shopName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.shopPrice != null">
+        Shop_price = #{record.shopPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="record.shopImg != null">
+        Shop_img = #{record.shopImg,jdbcType=VARCHAR},
+      </if>
+      <if test="record.shopDescribe != null">
+        Shop_describe = #{record.shopDescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="record.shopNum != null">
+        Shop_num = #{record.shopNum,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update shop_table
+    set Shop_id = #{record.shopId,jdbcType=INTEGER},
+      Shop_name = #{record.shopName,jdbcType=VARCHAR},
+      Shop_price = #{record.shopPrice,jdbcType=DOUBLE},
+      Shop_img = #{record.shopImg,jdbcType=VARCHAR},
+      Shop_describe = #{record.shopDescribe,jdbcType=VARCHAR},
+      Shop_num = #{record.shopNum,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.six.bean.ShopTable">
+    update shop_table
+    <set>
+      <if test="shopName != null">
+        Shop_name = #{shopName,jdbcType=VARCHAR},
+      </if>
+      <if test="shopPrice != null">
+        Shop_price = #{shopPrice,jdbcType=DOUBLE},
+      </if>
+      <if test="shopImg != null">
+        Shop_img = #{shopImg,jdbcType=VARCHAR},
+      </if>
+      <if test="shopDescribe != null">
+        Shop_describe = #{shopDescribe,jdbcType=VARCHAR},
+      </if>
+      <if test="shopNum != null">
+        Shop_num = #{shopNum,jdbcType=INTEGER},
+      </if>
+    </set>
+    where Shop_id = #{shopId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.six.bean.ShopTable">
+    update shop_table
+    set Shop_name = #{shopName,jdbcType=VARCHAR},
+      Shop_price = #{shopPrice,jdbcType=DOUBLE},
+      Shop_img = #{shopImg,jdbcType=VARCHAR},
+      Shop_describe = #{shopDescribe,jdbcType=VARCHAR},
+      Shop_num = #{shopNum,jdbcType=INTEGER}
+    where Shop_id = #{shopId,jdbcType=INTEGER}
+  </update>
+</mapper>
