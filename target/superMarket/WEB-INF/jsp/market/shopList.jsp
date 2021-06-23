@@ -184,13 +184,19 @@
                 layer.open({
                     title: '商品详情'
                     ,content:"" +
-                        "<table>\n" +
-                        "    <tr><td>商品ID：</td><td>"+data.shopId+"</td></tr>\n" +
-                        "    <tr><td>商品名称：</td><td>"+data.shopName+"</td></tr>\n" +
-                        "    <tr><td>商品价格</td><td>"+data.shopPrice+"</td></tr>\n" +
-                        "    <tr><td>商品图片</td><td><img src="+(data.shopImg!=null?data.shopImg:nuImg)+" style=\"max-height: 100px;max-width: 100px\"/></td></tr>\n" +
-                        "    <tr><td>商品描述</td><td>"+data.shopDescribe+"</td></tr>\n" +
-                        "    <tr><td>商品数量</td><td>"+data.shopNum+"</td></tr>\n" +
+                        "<table border='0' cellspacing='40'>\n" +
+                        "    <tr><td width='100px'>商品ID：</td>" +
+                        "<td>"+data.shopId+"</td></tr>\n" +
+                        "    <tr><td>商品名称：</td>" +
+                        "<td>"+data.shopName+"</td></tr>\n" +
+                        "    <tr><td>商品价格</td>" +
+                        "<td>"+data.shopPrice+"</td></tr>\n" +
+                        "    <tr><td>商品图片</td>" +
+                        "<td><img style=\"max-height: 100px;max-width: 100px\" src="+(data.shopImg!=null?data.shopImg:nuImg)+"/></td></tr>\n" +
+                        "    <tr><td>商品描述</td>" +
+                        "<td>"+data.shopDescribe+"</td></tr>\n" +
+                        "    <tr><td>商品数量</td>" +
+                        "<td>"+data.shopNum+"</td></tr>\n" +
                         "</table>"
                 });
             } else if(layEvent === 'del'){

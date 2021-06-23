@@ -31,11 +31,78 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c89bb540-2061-4af7-9149-b5ed19ccdc10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="c89bb540-2061-4af7-9149-b5ed19ccdc10" name="Default Changelist" comment="修改&lt;classifier&gt;jdk15&lt;/classifier&gt;">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/six/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/six/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/six/controller/ShopTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/six/controller/ShopTableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/six/controller/SupplierTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/six/controller/SupplierTableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/six/controller/UserTableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/six/controller/UserTableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/six/ocr/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/six/ocr/Check.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/six/service/UserTableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/six/service/UserTableService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/dbconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dbconfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/UserTableDAO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/UserTableDAO.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/market/shopList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/market/shopList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/AuthService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/FaceSearch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/BillTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/BillTableExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/BillTableExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/BillTableExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/BillTableExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/ShopTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/ShopTableExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/ShopTableExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/ShopTableExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/ShopTableExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/SupplierTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/SupplierTableExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/SupplierTableExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/SupplierTableExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/SupplierTableExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/UserTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/UserTableExample$Criteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/UserTableExample$Criterion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/UserTableExample$GeneratedCriteria.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/bean/UserTableExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/controller/BillTableController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/controller/PageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/controller/ShopTableController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/controller/SupplierTableController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/controller/UserTableController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/mapper/BillTableDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/mapper/ShopTableDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/mapper/SupplierTableDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/mapper/UserTableDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/ocr/AuthService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/ocr/BaseImg64.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/ocr/Check.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/service/BillTableService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/service/BillTableServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/service/ShopTableService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/service/ShopTableServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/service/SupplierTableService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/service/SupplierTableServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/service/UserTableService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/service/UserTableServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/util/LayUiBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/util/Msg.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/utils/Base64Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/utils/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/utils/GsonUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/six/utils/HttpUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dbconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dbconfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mappers/UserTableDAO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mappers/UserTableDAO.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/superMarket/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/superMarket/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/superMarket/WEB-INF/classes/com/six/controller/ShopTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/superMarket/WEB-INF/classes/com/six/controller/ShopTableController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/superMarket/WEB-INF/classes/com/six/controller/SupplierTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/superMarket/WEB-INF/classes/com/six/controller/SupplierTableController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/superMarket/WEB-INF/classes/com/six/controller/UserTableController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/superMarket/WEB-INF/classes/com/six/controller/UserTableController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/superMarket/WEB-INF/classes/dbconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/superMarket/WEB-INF/classes/dbconfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/superMarket/WEB-INF/classes/mappers/UserTableDAO.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/superMarket/WEB-INF/classes/mappers/UserTableDAO.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/superMarket/WEB-INF/jsp/market/shopList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/superMarket/WEB-INF/jsp/market/shopList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/superMarket/WEB-INF/lib/mysql-connector-java-5.1.24.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +161,13 @@
       </set>
     </option>
   </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="F:\WorkSpace\IdeaProjects\superMarket\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -106,6 +180,11 @@
       <MavenGeneralSettings>
         <option name="mavenHome" value="D:/environment/apache-maven-3.6.3-bin/apache-maven-3.6.3" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="1Y6FaSOtOO0FN3UKVaFWq9TNrLR" />
@@ -122,7 +201,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../import/bookProject" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -134,7 +213,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -144,6 +223,19 @@
       <recent name="E:\abcd\superMarket\src\main\webapp\WEB-INF\res\static\img" />
       <recent name="E:\abcd\superMarket\src\main\webapp\WEB-INF\res\static\js" />
     </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost/supplierTable/mohu" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.35">
     <configuration name="Check" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -158,6 +250,9 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="generated-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
+      <method v="2" />
     </configuration>
     <configuration name="Tomcat 9.0.35" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.35" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
@@ -234,10 +329,12 @@
     </configuration>
     <list>
       <item itemvalue="Application.Check" />
+      <item itemvalue="HTTP Request.generated-requests#1" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.35" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="HTTP Request.generated-requests#1" />
         <item itemvalue="Application.Check" />
       </list>
     </recent_temporary>
@@ -272,12 +369,29 @@
       <workItem from="1587392914011" duration="8000" />
       <workItem from="1590727027053" duration="229000" />
       <workItem from="1590727806961" duration="1088000" />
-      <workItem from="1590801320646" duration="4303000" />
+      <workItem from="1590801320646" duration="15635000" />
+      <workItem from="1591778214148" duration="1422000" />
+      <workItem from="1591923776315" duration="1386000" />
+      <workItem from="1592193523459" duration="4035000" />
+      <workItem from="1592288422706" duration="3260000" />
+      <workItem from="1592537342579" duration="369000" />
+      <workItem from="1592537724432" duration="405000" />
+      <workItem from="1592538360156" duration="105000" />
+      <workItem from="1592547270763" duration="12000" />
+      <workItem from="1624434173548" duration="3856000" />
     </task>
+    <task id="LOCAL-00001" summary="修改&lt;classifier&gt;jdk15&lt;/classifier&gt;">
+      <created>1590806673746</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590806673746</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -296,158 +410,29 @@
                   </entry>
                 </map>
               </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="WindowStateProjectService">
-    <state x="536" y="177" key="#Notifications" timestamp="1590728290393">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="536" y="177" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1590728290393" />
-    <state x="536" y="177" key="#Options" timestamp="1590727939631">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="536" y="177" key="#Options/0.0.1920.1040@0.0.1920.1040" timestamp="1590727939631" />
-    <state x="327" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590801367425">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="327" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590801367425" />
-    <state x="556" y="248" key="FileChooserDialogImpl" timestamp="1586748727882">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="556" y="248" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586748727882" />
-    <state x="753" y="432" key="Github.CreateGistDialog" timestamp="1590728265236">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="753" y="432" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590728265236" />
-    <state width="1204" height="281" key="GridCell.Tab.0.bottom" timestamp="1586747902563">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="668" height="196" key="GridCell.Tab.0.bottom/0.0.1024.728@0.0.1024.728" timestamp="1582272416214" />
-    <state width="1204" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586747902563" />
-    <state width="1204" height="281" key="GridCell.Tab.0.center" timestamp="1586747902563">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="668" height="196" key="GridCell.Tab.0.center/0.0.1024.728@0.0.1024.728" timestamp="1582272416211" />
-    <state width="1204" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586747902563" />
-    <state width="1204" height="281" key="GridCell.Tab.0.left" timestamp="1586747902563">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="668" height="196" key="GridCell.Tab.0.left/0.0.1024.728@0.0.1024.728" timestamp="1582272416207" />
-    <state width="1204" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586747902563" />
-    <state width="1204" height="281" key="GridCell.Tab.0.right" timestamp="1586747902563">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="668" height="196" key="GridCell.Tab.0.right/0.0.1024.728@0.0.1024.728" timestamp="1582272416213" />
-    <state width="1204" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586747902563" />
-    <state width="1204" height="281" key="GridCell.Tab.1.bottom" timestamp="1586747902473">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="668" height="196" key="GridCell.Tab.1.bottom/0.0.1024.728@0.0.1024.728" timestamp="1582272416218" />
-    <state width="1204" height="281" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586747902473" />
-    <state width="1204" height="281" key="GridCell.Tab.1.center" timestamp="1586747902473">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="668" height="196" key="GridCell.Tab.1.center/0.0.1024.728@0.0.1024.728" timestamp="1582272416216" />
-    <state width="1204" height="281" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586747902473" />
-    <state width="1204" height="281" key="GridCell.Tab.1.left" timestamp="1586747902473">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="668" height="196" key="GridCell.Tab.1.left/0.0.1024.728@0.0.1024.728" timestamp="1582272416215" />
-    <state width="1204" height="281" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586747902473" />
-    <state width="1204" height="281" key="GridCell.Tab.1.right" timestamp="1586747902473">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="668" height="196" key="GridCell.Tab.1.right/0.0.1024.728@0.0.1024.728" timestamp="1582272416217" />
-    <state width="1204" height="281" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586747902473" />
-    <state width="1293" height="577" key="GridCell.Tab.11.bottom" timestamp="1583474444501">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="577" key="GridCell.Tab.11.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583474444501" />
-    <state width="1293" height="577" key="GridCell.Tab.11.center" timestamp="1583474444501">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="577" key="GridCell.Tab.11.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583474444501" />
-    <state width="1293" height="577" key="GridCell.Tab.11.left" timestamp="1583474444501">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="577" key="GridCell.Tab.11.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583474444501" />
-    <state width="1293" height="577" key="GridCell.Tab.11.right" timestamp="1583474444501">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="577" key="GridCell.Tab.11.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583474444501" />
-    <state width="1293" height="577" key="GridCell.Tab.12.bottom" timestamp="1583474463022">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="577" key="GridCell.Tab.12.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583474463022" />
-    <state width="1293" height="577" key="GridCell.Tab.12.center" timestamp="1583474463022">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="577" key="GridCell.Tab.12.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583474463022" />
-    <state width="1293" height="577" key="GridCell.Tab.12.left" timestamp="1583474463022">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="577" key="GridCell.Tab.12.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583474463022" />
-    <state width="1293" height="577" key="GridCell.Tab.12.right" timestamp="1583474463022">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1293" height="577" key="GridCell.Tab.12.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583474463022" />
-    <state width="1204" height="281" key="GridCell.Tab.2.bottom" timestamp="1586747902473">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="668" height="196" key="GridCell.Tab.2.bottom/0.0.1024.728@0.0.1024.728" timestamp="1582272416225" />
-    <state width="1204" height="281" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586747902473" />
-    <state width="1204" height="281" key="GridCell.Tab.2.center" timestamp="1586747902473">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="668" height="196" key="GridCell.Tab.2.center/0.0.1024.728@0.0.1024.728" timestamp="1582272416220" />
-    <state width="1204" height="281" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586747902473" />
-    <state width="1204" height="281" key="GridCell.Tab.2.left" timestamp="1586747902473">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="668" height="196" key="GridCell.Tab.2.left/0.0.1024.728@0.0.1024.728" timestamp="1582272416218" />
-    <state width="1204" height="281" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586747902473" />
-    <state width="1204" height="281" key="GridCell.Tab.2.right" timestamp="1586747902473">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="668" height="196" key="GridCell.Tab.2.right/0.0.1024.728@0.0.1024.728" timestamp="1582272416223" />
-    <state width="1204" height="281" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586747902473" />
-    <state x="306" y="148" key="Maven.ArtifactSearchDialog" timestamp="1582261522812">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="306" y="148" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582261522812" />
-    <state x="95" y="39" key="SettingsEditor" timestamp="1590805922541">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="95" y="39" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590805922541" />
-    <state x="662" y="314" key="com.intellij.ide.util.TipDialog" timestamp="1590727027971">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="662" y="314" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590727027971" />
-    <state x="1033" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590802153832">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1033" y="410" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590802153832" />
-    <state x="600" y="242" key="run.anything.popup" timestamp="1590727047688">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="600" y="242" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590727047688" />
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改&lt;classifier&gt;jdk15&lt;/classifier&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改&lt;classifier&gt;jdk15&lt;/classifier&gt;" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/six/ocr/Check.java</url>
-          <line>136</line>
-          <properties class="com.six.ocr.Check" method="main">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="WindowStateProjectService">
+    <state x="555" y="113" key="CommitChangelistDialog2" timestamp="1624445983711">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="555" y="113" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1624445983711" />
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1624436809545">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1624436809545" />
+    <state x="601" y="396" key="com.intellij.ide.util.TipDialog" timestamp="1624434187729">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="601" y="396" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1624434187729" />
   </component>
 </project>

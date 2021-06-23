@@ -61,7 +61,7 @@ public class SupplierTableController {
     @RequestMapping(value = "/mohu", method = RequestMethod.POST)
     @ResponseBody
 
-    public Msg slectFind(@RequestParam(value = "pageNumber", defaultValue = "1") Integer pageNumber,@RequestParam(value = "supplierName", defaultValue = "") String supplierName) {
+    public Msg selectFind(@RequestParam(value = "pageNumber", defaultValue = "1") Integer pageNumber,@RequestParam(value = "supplierName", defaultValue = "") String supplierName) {
         System.out.println("LLLL"+pageNumber);
 
         System.out.println("模糊查询");

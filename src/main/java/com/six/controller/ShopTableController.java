@@ -173,7 +173,7 @@ public String  upload(HttpServletRequest request, @RequestParam("file") Multipar
         }
         //将上传文件保存到一个目标文件当中
 //D:\Users\28606\IdeaProjects\superMarket
-        file.transferTo(new File("D:\\Users\\28606\\IdeaProjects\\superMarket\\target\\superMarket\\WEB-INF\\res\\static\\upImg"+ File.separator + filename));
+        file.transferTo(new File("F:\\WorkSpace\\IdeaProjects\\superMarket\\target\\superMarket\\WEB-INF\\res\\static\\upImg"+ File.separator + filename));
         //file.transferTo(new File(path+ File.separator + filename));
         String newUrl="../../res/static/upImg/"+filename;
         return newUrl;

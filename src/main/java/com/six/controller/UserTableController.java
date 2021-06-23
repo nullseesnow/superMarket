@@ -63,7 +63,7 @@ public class UserTableController {
 
     @RequestMapping(value = "/mohu", method = RequestMethod.POST)
     @ResponseBody
-    public Msg slectFind(@RequestParam(value = "pageNumber", defaultValue = "1") Integer pageNumber, @RequestParam(value = "userName", defaultValue = "") String userName) {
+    public Msg selectFind(@RequestParam(value = "pageNumber", defaultValue = "1") Integer pageNumber, @RequestParam(value = "userName", defaultValue = "") String userName) {
 
 //        System.out.println("LLLL" + pageNumber);
 

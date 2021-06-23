@@ -32,5 +32,7 @@ public interface UserTableService {
     int updateByPrimaryKey1(UserTable record);
     //bootstrap  样式进行  分页  传入实体就是  查询信息进行分页
     List<UserTable> selectTaskByLimit(UserTable userTable);
-    public List<UserTable> findByName(String userName);
+    List<UserTable> findByName(String userName);
+    //List<UserTable> selectAllUser();
+
 }

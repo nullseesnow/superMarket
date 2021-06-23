@@ -267,10 +267,7 @@
 
     <!--模糊查询-->
     <select id="findByName" parameterType="java.lang.String" resultMap="BaseResultMap">
-
-
    select  * from user_table where user_name like #{userName}
-
 </select>
   <update id="updateByPrimaryKey1" parameterType="com.six.bean.UserTable">
     update user_table
