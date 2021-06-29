@@ -1,0 +1,135 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : H1
+ Source Server Type    : MySQL
+ Source Server Version : 80020
+ Source Host           : localhost:3306
+ Source Schema         : yk
+
+ Target Server Type    : MySQL
+ Target Server Version : 80020
+ File Encoding         : 65001
+
+ Date: 29/06/2021 11:55:24
+*/
+
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for bill_table
+-- ----------------------------
+DROP TABLE IF EXISTS `bill_table`;
+CREATE TABLE `bill_table`  (
+  `bill_id` int(0) NOT NULL AUTO_INCREMENT,
+  `supplier_id` int(0) NULL DEFAULT NULL,
+  `shop_id` int(0) NULL DEFAULT NULL,
+  `shop_price` double(10, 2) NULL DEFAULT NULL,
+  `bill_money` double NULL DEFAULT NULL,
+  `bill_date` date NULL DEFAULT NULL,
+  `bill_payment` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`bill_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of bill_table
+-- ----------------------------
+INSERT INTO `bill_table` VALUES (1, 40141, 4, 1499.00, 599600, '2020-05-30', '微信');
+INSERT INTO `bill_table` VALUES (2, 40141, 1, 38.00, 570, '2020-05-30', '银行转账');
+
+-- ----------------------------
+-- Table structure for shop_table
+-- ----------------------------
+DROP TABLE IF EXISTS `shop_table`;
+CREATE TABLE `shop_table`  (
+  `shop_id` int(0) NOT NULL AUTO_INCREMENT,
+  `shop_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `shop_price` double(10, 2) NULL DEFAULT NULL,
+  `shop_img` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `shop_describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `shop_num` int(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`shop_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of shop_table
+-- ----------------------------
+INSERT INTO `shop_table` VALUES (1, '尚岩陶瓷过滤茶杯 办公室泡茶杯家用 滤茶杯带盖马克杯茶水分离杯', 40.00, 'null', '尚岩陶瓷过滤茶杯 办公室泡茶杯家用 滤茶杯带盖马克杯茶水分离杯', 15);
+INSERT INTO `shop_table` VALUES (2, '2020新茶西湖牌雨前浓香龙井茶叶正宗工艺250g春茶绿茶散装茶叶', 230.00, NULL, '浙江老字号，71年龙井茶制作工艺精心炒制', 200);
+INSERT INTO `shop_table` VALUES (3, '2020新茶西湖牌明前特级龙井茶叶罐装正宗绿茶春茶杭州茶厂', 180.00, NULL, '正宗品质 核心原产地直供', 520);
+INSERT INTO `shop_table` VALUES (4, '贵州茅台酒飞天53%vol500ml', 1499.00, NULL, '酒厂直送 防伪溯源 正品保证', 200);
+INSERT INTO `shop_table` VALUES (5, '牛蒡根金银花菊花枸杞决明子养肝桂花清火蒲公英花茶组合养生茶包', 49.90, NULL, '共7瓶装，买2份再送杯，春季喝的清爽茶', 1484);
+INSERT INTO `shop_table` VALUES (6, '王氏雄风2020年新茶正宗西湖泉龙井茶特级明前绿茶散装茶叶500g', 488.00, NULL, '免运费', 997173);
+INSERT INTO `shop_table` VALUES (7, '小青柑橘普柑橘8年宫廷品质普洱茶桔普茶新会陈皮熟茶礼盒装500g', 238.00, NULL, '一颗一泡 香、甜、滑、顺，一颗泡一整天', 5500);
+INSERT INTO `shop_table` VALUES (8, '阿是法师法师地方', 4563.00, NULL, '啊瑞丰哇额', 456);
+INSERT INTO `shop_table` VALUES (9, '而我国特无人管', 786.00, NULL, '当然更好地融合', 22);
+INSERT INTO `shop_table` VALUES (10, '但仍然福特如果是', 236.30, NULL, '的方法是发', 2134);
+INSERT INTO `shop_table` VALUES (11, '啊第三方水电费水电人工', 456.30, NULL, '儿童个玩法', 15);
+INSERT INTO `shop_table` VALUES (12, '色弱法尔夫身无分文儿', 4563.80, NULL, '乏味发我', 45);
+INSERT INTO `shop_table` VALUES (13, '皇家盛典', 15663.99, NULL, '发发发', 10);
+INSERT INTO `shop_table` VALUES (14, '是大部分是大部分是的', 12.36, NULL, '瑞丰公司', 10);
+INSERT INTO `shop_table` VALUES (15, '山东分公司公司染色染', 15699.63, NULL, '山东挖掘机', 2);
+INSERT INTO `shop_table` VALUES (16, '撒的方法无法哇', 99999999.00, NULL, '东风公司', 56);
+INSERT INTO `shop_table` VALUES (17, '撒丁岛是否收到收到', 99.00, NULL, '十多个人分', 12);
+INSERT INTO `shop_table` VALUES (18, '风格化农发行农发行', 345.00, NULL, '3333333', 1);
+INSERT INTO `shop_table` VALUES (19, '阿瑟打算', 45.00, '', '撒旦法撒旦法', 16);
+INSERT INTO `shop_table` VALUES (20, '阿达沙发垫', 40.00, '../../res/static/upImg/The cup03.jpg_50x50.jpg', '撒旦法撒旦法', 165161);
+INSERT INTO `shop_table` VALUES (21, '阿达沙发垫', 40.00, '../../res/static/upImg/The cup01.jpg', '阿阿我发额我发', 15);
+INSERT INTO `shop_table` VALUES (26, '壁画', 12.00, '../../res/static/upImg/300977.jpg', '漫画壁画', 20);
+
+-- ----------------------------
+-- Table structure for supplier_table
+-- ----------------------------
+DROP TABLE IF EXISTS `supplier_table`;
+CREATE TABLE `supplier_table`  (
+  `supplier_id` int(0) NOT NULL,
+  `supplier_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `supplier_people` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `supplier_phone` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `supplier_address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `supplier_fax` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `supplier_describe` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '注释描述',
+  PRIMARY KEY (`supplier_id`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of supplier_table
+-- ----------------------------
+INSERT INTO `supplier_table` VALUES (40140, '虾米家', NULL, '1234564879', '郑州金水区', '00+86-22-6035', 'Seafood耀恩Yaoen大拇指');
+INSERT INTO `supplier_table` VALUES (40141, '天猫超市', NULL, '666666666', '送货范围仅限焦作、南阳、驻马店、洛阳、开封、三门峡、新乡、郑州、鹤壁、周口、安阳、漯河、商丘、濮阳、济源、许昌、平顶山、信阳地区(生鲜类别仅限部分地区)', NULL, '');
+INSERT INTO `supplier_table` VALUES (40142, '茶诵', NULL, '32656565', NULL, NULL, NULL);
+INSERT INTO `supplier_table` VALUES (40143, '尚岩家具陶瓷', NULL, '153453545', '福建泉州', NULL, '尚岩陶瓷过滤茶杯 办公室泡茶杯家用 滤茶杯带盖马克杯茶水分离杯');
+INSERT INTO `supplier_table` VALUES (40144, '飒飒', NULL, '234234234', '淡淡的', NULL, '热舞热舞');
+INSERT INTO `supplier_table` VALUES (40145, '额额热', NULL, '二二', '二二', NULL, '33反攻倒算');
+
+-- ----------------------------
+-- Table structure for user_table
+-- ----------------------------
+DROP TABLE IF EXISTS `user_table`;
+CREATE TABLE `user_table`  (
+  `user_id` int(0) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `user_pwd` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `user_gender` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `user_birthday` date NULL DEFAULT NULL,
+  `user_phone` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `user_address` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  `user_grade` int(0) NULL DEFAULT NULL,
+  PRIMARY KEY (`user_id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 12347 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of user_table
+-- ----------------------------
+INSERT INTO `user_table` VALUES (1, '韩信', '123', '男', '0000-00-00', '12345678910', '楚汉颍川', 0);
+INSERT INTO `user_table` VALUES (2, '李白', '123', '男', '0701-01-01', '12345678910', '唐朝西域碎叶城', 0);
+INSERT INTO `user_table` VALUES (3, '杜甫', '123', '男', '0712-01-01', '12345678910', '唐朝河南巩县（原籍湖北襄阳）', 0);
+INSERT INTO `user_table` VALUES (4, '杜牧', '123', '男', '0803-01-01', '12345678910', '晚唐京兆万年（今陕西西安）', 0);
+INSERT INTO `user_table` VALUES (5, '李商隐', '123', '男', '0813-01-01', '12345678910', '晚唐怀州河内（今河南泌阳市）', 0);
+INSERT INTO `user_table` VALUES (6, '刘邦', '123', '男', NULL, '12345678910', '公元前沛郡丰邑（今江苏丰县）人', 0);
+INSERT INTO `user_table` VALUES (101, 'admin', 'admin', '男', NULL, NULL, NULL, 1);
+INSERT INTO `user_table` VALUES (12345, 'lol', '123456', '男', NULL, '12365478910', 'sadfa', 1);
+INSERT INTO `user_table` VALUES (12346, 'asas', '123456', '女', NULL, '7896541230', 'asxdsasa', 0);
+
+SET FOREIGN_KEY_CHECKS = 1;
